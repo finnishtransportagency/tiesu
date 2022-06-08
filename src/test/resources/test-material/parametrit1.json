@@ -1,0 +1,22 @@
+[
+    {
+        "nimi": "parametrit",
+        "sisalto": {
+            "AVAIN": "jarjestelma",
+            "ARVO": "https://extranet.liikennevirasto.fi/forms/fr/Tiesu/jarjestelmatieto_yllapito",
+            "RIVIMUOKKAAJATUNNUS": "solita",
+            "KUVAUS": "Lomake tietojen muokkaamiseen.",
+            "OTSIKKO": "Jarjestelmatieto"
+        }
+    },
+    {
+        "nimi": "parametrit",
+        "sisalto": {
+            "AVAIN": "fyysinentietovaranto",
+            "ARVO": "https://extranet.liikennevirasto.fi/forms/fr/Tiesu/fyysinen_tietovaranto_yllapito",
+            "RIVIMUOKKAAJATUNNUS": "solita",
+            "KUVAUS": "Lomake tietojen muokkaamiseen.",
+            "OTSIKKO": "Fyysinen tietovaranto"
+        }
+    }
+]

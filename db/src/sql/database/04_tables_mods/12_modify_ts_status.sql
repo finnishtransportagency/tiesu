@@ -1,0 +1,3 @@
+--- ANALPK-1313
+INSERT INTO TS_STATUS (STATUS_ID, STATUS_SELITE) VALUES (12,'Suunnitelma käynnissä');
+INSERT INTO TS_STATUS (STATUS_ID, STATUS_SELITE) VALUES (13,'Toteutuksessa / Osin toteutuksessa');

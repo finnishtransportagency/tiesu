@@ -1,0 +1,6 @@
+configs:
+    use: 'local'
+
+    local:
+        public_ip: '192.168.60.80'
+        ssh_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGhBvP9U2yYiIdgPdjZq21InbzgIUFDoTiTodG+FpBWgQq4F5bMO0cR23BdhLu7ww9oKVPd6w7+hCLQLla8OwZo6HBtJPxmMY6bLUm1wtiO3VA0hVio5rtlBEvmcyviMKEin7th3eEK9jumoTAu6+i0DaraWnT2xn3MHzO1sF7lZ/fJ0Z2cSkE+N4vK1qfxv97G4QBOX1ZtFh0riTIvgZarWaQ/Jr0q3QgcrmarfnRiAofx1ZeLJ55S1e5ax/nBj4mbU8HavApBg2YMXr9JTrhwkWs4X079Bn5aFCXZJliGcIxDo9vDPI7016bgo8AWYSi8JJOM04n8bc90MqdCFOd tuukkala@MACTF1K5HF1R'

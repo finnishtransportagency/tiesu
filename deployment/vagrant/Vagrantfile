@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+require 'yaml'
+
+current_dir    = File.dirname(File.expand_path(__FILE__))
+configs        = YAML.load_file("#{current_dir}/config.yaml")
+vagrant_config = configs['configs'][configs['configs']['use']]
+
+Vagrant.configure("2") do |config|
+
+  # Oracle official vagrant box (http://yum.oracle.com/boxes/)
+  config.vm.box = "ol74"
+  config.vm.box_url = "http://yum.oracle.com/boxes/oraclelinux/ol74/ol74.box"
+  config.vm.box_download_checksum = "f78ceb8c27eed321defb0b8f5fe6514e"
+  config.vm.box_download_checksum_type = "md5"
+
+  config.vm.define "tiesuVagrant" do |tiesuVagrant|
+  tiesuVagrant.vm.network 'private_network', ip: vagrant_config['public_ip']
+    tiesuVagrant.vm.provision :shell do |shell|
+      SSH_KEY = vagrant_config['ssh_key']
+      shell.inline =  <<-EOF
+        set -e
+        # Add ssh key
+        echo #{SSH_KEY} >> /home/vagrant/.ssh/authorized_keys
+      EOF
+    end
+  end
+
+
+end

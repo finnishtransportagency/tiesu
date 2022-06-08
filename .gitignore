@@ -1,0 +1,10 @@
+~$tien_yleissuunnitelma.xlsx
+~$tiesuunnitelma.xlsx
+
+# exclude everything
+target/*
+
+# exception to the rule
+!target/.gitkeep 
+~$rautatien_yleissuunnitelma.xlsx
+~$ratasuunnitelma.xlsx

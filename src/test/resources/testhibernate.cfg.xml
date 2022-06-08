@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+<!--   <property name="hibernate.connection.driver_class">org.h2.Driver</property> -->
+<!--   <property name="hibernate.connection.url">jdbc:h2:mem:test;DB_CLOSE_DELAY=-1</property> -->
+<!--   <property name="hibernate.connection.username"></property> -->
+<!--   <property name="hibernate.connection.password"></property>  -->
+  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+  <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521</property>
+  <property name="hibernate.connection.username">tiesu</property>
+  <property name="hibernate.connection.password">livirules</property>
+  <property name="show_sql">false</property>
+   <mapping class="fi.liike.rest.Model.SovellusHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.SovellusUpdate"></mapping>
+   <mapping class="fi.liike.rest.Model.SovellusHenkiloRooliHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.SovellusHenkiloRooli"></mapping>
+   <mapping class="fi.liike.rest.Model.SovellusTemp"></mapping>
+   <mapping class="fi.liike.rest.Model.JarjestelmaHenkiloRooliHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.JarjestelmaHenkiloRooli"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinHenkiloRooliTable"></mapping>
+   <mapping class="fi.liike.rest.Model.Rooli"></mapping>
+   <mapping class="fi.liike.rest.Model.HenkiloTemp"></mapping>
+   <mapping class="fi.liike.rest.Model.Henkilo"></mapping>
+   <mapping class="fi.liike.rest.Model.JarjestelmaMinimal"></mapping>
+   <mapping class="fi.liike.rest.Model.JarjestelmaSahke"></mapping>
+   <mapping class="fi.liike.rest.Model.Sovellus"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinJarjestelmaLinkkaus"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinJarjestelmaLinkkausHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.linkitys.LinkitysHierarkia"></mapping>
+   <mapping class="fi.liike.rest.Model.Paatietoryhma"></mapping>
+   <mapping class="fi.liike.rest.Model.PaatietoryhmaHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.Tietoryhma"></mapping>
+   <mapping class="fi.liike.rest.Model.TietoryhmaHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinTietoryhmaPaatietoryhma"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinTietoryhmaPaatietoryhmaHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.LooginenTietovaranto"></mapping>
+   <mapping class="fi.liike.rest.Model.LooginenTietovarantoHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.FyysinenTietovaranto"></mapping>
+   <mapping class="fi.liike.rest.Model.FyysinenTietovarantoHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinLooginenFyysinen"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinLooginenFyysinenHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.Hierarkia"></mapping>
+   <mapping class="fi.liike.rest.Model.MolekyyliHierarkia"></mapping>
+   <mapping class="fi.liike.rest.Model.Jarjestelma"></mapping>
+   <mapping class="fi.liike.rest.Model.JarjestelmaHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.JarjestelmaKasite"></mapping>
+   <mapping class="fi.liike.rest.Model.Tietolaji"></mapping>
+   <mapping class="fi.liike.rest.Model.TietolajiHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinTietolajiLooginen"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinTietolajiLooginenHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinTietolajiTietoryhma"></mapping>
+   <mapping class="fi.liike.rest.Model.JoinTietolajiTietoryhmaHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.Palvelu"></mapping>
+   <mapping class="fi.liike.rest.Model.PalveluHistory"></mapping>
+   <mapping class="fi.liike.rest.Model.PalveluKasite"></mapping>
+   <mapping class="fi.liike.testutils.TestObj"></mapping>
+   <mapping class="fi.liike.testutils.TestObjTemp"></mapping>
+</session-factory>
+</hibernate-configuration>
