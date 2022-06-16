@@ -6,7 +6,6 @@ RUN mkdir -p /usr/src/webapp
 WORKDIR /usr/src/app
 
 COPY ./src/main/app /usr/src/app
-COPY ./src/main/webapp /usr/src/webapp
 
 RUN npm rebuild node-sass
 RUN npm install
