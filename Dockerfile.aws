@@ -26,8 +26,8 @@ COPY ./lib/ojdbc6.jar /data/lib/ojdbc6.jar
 COPY ./src/main/resources/WEB-INF /data/src/main/webapp
 
 #Copy frontend
-COPY --from=BUILD_FRONTEND /usr/src/webapp data/src/main/webapp
-RUN cd /data && mvn clean install -Dmaven.test.skip=true
+COPY --from=BUILD_FRONTEND /usr/src/webapp /data/src/main/webapp
+RUN cd /data && mvn clean install -Dmaven.test.skip=true -Dmaven.war.webxml=/data/src/main/resources/WEB-INF/web.xml
 
 FROM 894932018761.dkr.ecr.eu-west-1.amazonaws.com/tomcat:7-jdk8-openjdk
 
