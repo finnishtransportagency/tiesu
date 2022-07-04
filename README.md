@@ -39,7 +39,7 @@ To build maven project, run:
 
 ```
 mvn clean install
-``
+```
 
 ## Backend
 ## Backend requires ojdbc6 manual maven installation because of Oracle's licensing policy.
@@ -49,3 +49,8 @@ mvn clean install
 ## 1. Run create_user.sql with DB admin rights. Use sqldeveloper or something else.
 ## 2. Run main_install.sql with DB admin or tiesu user rights.
 ## 3. Commit. => Necessary data for Järjestelmäsalkku should be available
+
+# Local database setup
+1. Run ```start-local-db.sh```
+
+
