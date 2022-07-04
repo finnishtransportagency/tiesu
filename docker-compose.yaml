@@ -1,0 +1,10 @@
+services:
+  db:
+    build:
+      dockerfile: ./Dockerfile_postgres
+    container_name: tiesu-pgsql
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=tiesu
+      - POSTGRES_PASSWORD=tiesu123
