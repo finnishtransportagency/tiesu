@@ -28,7 +28,7 @@ public class YleissuunnitelmaDaoImpl extends SearchDaoImpl implements MainDao {
 
 	@Override
 	public Haettava save(Session session, DaoContent saveContent) throws SQLException {
-		return super.save(session, saveContent, "YLEISSUUNITELMA_SEQ", new YleissuunnitelmaHistory());
+		return super.save(session, saveContent, "yleissuunitelma_seq", new YleissuunnitelmaHistory());
 	}
 
 	@Override

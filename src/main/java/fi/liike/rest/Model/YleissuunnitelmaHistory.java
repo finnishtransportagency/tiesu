@@ -28,7 +28,7 @@ public class YleissuunnitelmaHistory implements Serializable, HaettavaHistory {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_gen")
-	@SequenceGenerator(name = "seq_gen", sequenceName = "YLEISSUUNNITELMA_HIST_SEQ")
+	@SequenceGenerator(name = "seq_gen", sequenceName = "yleissuunnitelma_hist_seq")
 	@Column(name = "RIVI_ID", unique = true, nullable = false)
 	private Long rivi_id;
 
@@ -187,7 +187,7 @@ public class YleissuunnitelmaHistory implements Serializable, HaettavaHistory {
 	private String documentId;
 
 	@Column(name = "RIVITUNNUS")
-	private String rivitunnus;
+	private int rivitunnus;
 
 	@Column(name = "RIVITILA")
 	private String rivitila;
@@ -593,11 +593,11 @@ public class YleissuunnitelmaHistory implements Serializable, HaettavaHistory {
 		this.rivitila = rivitila;
 	}
 
-	public String getRivitunnus() {
+	public int getRivitunnus() {
 		return rivitunnus;
 	}
 
-	public void setRivitunnus(String rivitunnus) {
+	public void setRivitunnus(int rivitunnus) {
 		this.rivitunnus = rivitunnus;
 	}
 

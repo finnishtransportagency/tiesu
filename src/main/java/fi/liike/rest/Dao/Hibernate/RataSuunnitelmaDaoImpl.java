@@ -28,7 +28,7 @@ public class RataSuunnitelmaDaoImpl extends SearchDaoImpl implements MainDao {
 
 	@Override
 	public Haettava save(Session session, DaoContent saveContent) throws SQLException {
-		return super.save(session, saveContent, "RATASUUNNITELMA_SEQ", new RataSuunnitelmaHistory());
+		return super.save(session, saveContent, "ratasuunnitelma_seq", new RataSuunnitelmaHistory());
 	}
 
 	@Override

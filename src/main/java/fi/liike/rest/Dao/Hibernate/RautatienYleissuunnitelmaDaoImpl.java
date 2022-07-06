@@ -28,7 +28,7 @@ public class RautatienYleissuunnitelmaDaoImpl extends SearchDaoImpl implements M
 
 	@Override
 	public Haettava save(Session session, DaoContent saveContent) throws SQLException {
-		return super.save(session, saveContent, "RAUTATIEN_YLEISSUUNNITELMA_SEQ", new RautatienYleissuunnitelmaHistory());
+		return super.save(session, saveContent, "rautatien_yleissuunnitelma_seq", new RautatienYleissuunnitelmaHistory());
 	}
 
 	@Override
