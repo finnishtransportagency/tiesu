@@ -16,7 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationTargetException;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -148,9 +148,9 @@ public class HibernateDao extends HibernateSession {
 		boolean freeIdFound = false;
 
 		while (!freeIdFound) {
-			SQLQuery increaseSeqQuery = session.createSQLQuery("select tiesu." + sequence + ".nextval from dual");
-			BigDecimal newValue = (BigDecimal) increaseSeqQuery.uniqueResult();
-			id = newValue.intValue();
+			SQLQuery increaseSeqQuery = session.createSQLQuery("select nextval('" + sequence + "')");
+			Object newValue = increaseSeqQuery.uniqueResult();
+			id = ((BigInteger) newValue).intValue();
 
 			Criteria criteria = session.createCriteria(content.getClass());
 			criteria.add(Restrictions.eq("tunnus", id));
