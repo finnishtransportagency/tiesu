@@ -8,3 +8,5 @@ target/*
 !target/.gitkeep 
 ~$rautatien_yleissuunnitelma.xlsx
 ~$ratasuunnitelma.xlsx
+vagrant_rsa
+password.txt
