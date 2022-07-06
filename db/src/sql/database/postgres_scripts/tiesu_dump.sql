@@ -768,7 +768,7 @@ CREATE TABLE tiesutst."TIESUUNNITELMA" (
 );
 
 
-ALTER TABLE tiesutst."TIESUUNNITELMA" OWNER TO tiesu;
+ALTER TABLE tiesutst."tiesuunnitelma" OWNER TO tiesu;
 
 --
 -- Name: TIESUUNNITELMAHISTORIA; Type: TABLE; Schema: tiesutst; Owner: tiesu
@@ -1511,6 +1511,28 @@ ALTER TABLE ONLY tiesutst."YS_STATUS"
 -- PostgreSQL database dump complete
 --
 
+alter table tiesutst."RYS_KOHDE" rename to "rys_kohde";
+alter table tiesutst."YS_KOHDE" rename to "ys_kohde";
+alter table tiesutst."RT_HISTORIA" rename to "rt_historia";
+alter table tiesutst."PALVELUPAIKAT" rename to "palvelupaikat";
+alter table tiesutst."TIESUUNNITELMAHISTORIA" rename to "tiesuunnitelmahistoria";
+alter table tiesutst."RYS_HISTORIA" rename to "rys_historia";
+alter table tiesutst."TIESUUNNITELMA_KASITE_ARVO" rename to "tiesuunnitelma_kasite_arvo";
+alter table tiesutst."RT_KASITE_ARVO" rename to "rt_kasite_arvo";
+alter table tiesutst."TS_STATUS" rename to "ts_status";
+alter table tiesutst."YLEISSUUNNITELMAHISTORIA" rename to "yleissuunnitelmahistoria";
+alter table tiesutst."YLEISSUUNITELMA" rename to "yleissuunitelma";
+alter table tiesutst."YS_STATUS" rename to "ys_status";
+alter table tiesutst."TS_KOHDE" rename to "ts_kohde";
+alter table tiesutst."RS_STATUS" rename to "rs_status";
+alter table tiesutst."RATASUUNNITELMA" rename to "ratasuunnitelma";
+alter table tiesutst."RS_KOHDE" rename to "rs_kohde";
+alter table tiesutst."RYS_STATUS" rename to "rys_status";
+-- alter table tiesutst."TIESUUNNITELMA" rename to tiesutst."tiesuunnitelma";
+alter table tiesutst."YLEISSUUNNITELMA_KASITE_ARVO" rename to "yleissuunnitelma_kasite_arvo";
+alter table tiesutst."RAUTATIEN_YLEISSUUNNITELMA" rename to "rautatien_yleissuunnitelma";
+
+
 CREATE SEQUENCE tiesutst."TIESUUNNITELMA_SEQ" START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 CREATE SEQUENCE tiesutst."YLEISSUUNITELMA_SEQ" START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 CREATE SEQUENCE tiesutst."RAUTATIEN_YLEISSUUNNITELMA_SEQ" START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
@@ -1519,3 +1541,12 @@ CREATE SEQUENCE tiesutst."TIESUUNNITELMA_HIST_SEQ" START WITH 1 INCREMENT BY 1 N
 CREATE SEQUENCE tiesutst."YLEISSUUNNITELMA_HIST_SEQ" START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 CREATE SEQUENCE tiesutst."RYS_HIST_SEQ" START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
 CREATE SEQUENCE tiesutst."RT_HIST_SEQ" START WITH 1 INCREMENT BY 1 NO MINVALUE NO MAXVALUE CACHE 1;
+
+alter sequence tiesutst."TIESUUNNITELMA_SEQ" rename to "tiesunnitelma_seq";
+alter sequence tiesutst."RAUTATIEN_YLEISSUUNNITELMA_SEQ" rename to "rautatien_yleissuunnitelma_seq";
+alter sequence tiesutst."YLEISSUUNNITELMA_HIST_SEQ" rename to "yleissuunnitelma_hist_seq";
+alter sequence tiesutst."RYS_HIST_SEQ" rename to "rys_hist_seq";
+alter sequence tiesutst."TIESUUNNITELMA_HIST_SEQ" rename to "tiesuunnitelma_hist_seq";
+alter sequence tiesutst."RT_HIST_SEQ" rename to "rt_hist_seq";
+alter sequence tiesutst."RATASUUNNITELMA_SEQ" rename to "ratasuunnitelma_seq";
+alter sequence tiesutst."YLEISSUUNITELMA_SEQ" rename to "yleissuunitelma_seq";
