@@ -519,17 +519,17 @@ CREATE TABLE tiesutst."rt_kasite_arvo" (
 ALTER TABLE tiesutst."rt_kasite_arvo" OWNER TO tiesu;
 
 --
--- Name: RT_YLEIS_KASITE_ARVO; Type: TABLE; Schema: tiesutst; Owner: tiesu
+-- Name: rt_yleis_kasite_arvo; Type: TABLE; Schema: tiesutst; Owner: tiesu
 --
 
-CREATE TABLE tiesutst."RT_YLEIS_KASITE_ARVO" (
+CREATE TABLE tiesutst."rt_yleis_kasite_arvo" (
     "kasite_wid" numeric(38,0) NOT NULL,
     "kasite" character varying(100),
     "arvo" character varying(200)
 );
 
 
-ALTER TABLE tiesutst."RT_YLEIS_KASITE_ARVO" OWNER TO tiesu;
+ALTER TABLE tiesutst."rt_yleis_kasite_arvo" OWNER TO tiesu;
 
 --
 -- Name: RYS_HISTORIA; Type: TABLE; Schema: tiesutst; Owner: tiesu
@@ -1396,11 +1396,11 @@ ALTER TABLE ONLY tiesutst."rt_kasite_arvo"
 
 
 --
--- Name: RT_YLEIS_KASITE_ARVO RT_YLEIS_KASITE_ARVO_pkey; Type: CONSTRAINT; Schema: tiesutst; Owner: tiesu
+-- Name: rt_yleis_kasite_arvo rt_yleis_kasite_arvo_pkey; Type: CONSTRAINT; Schema: tiesutst; Owner: tiesu
 --
 
-ALTER TABLE ONLY tiesutst."RT_YLEIS_KASITE_ARVO"
-    ADD CONSTRAINT "RT_YLEIS_KASITE_ARVO_pkey" PRIMARY KEY ("kasite_wid");
+ALTER TABLE ONLY tiesutst."rt_yleis_kasite_arvo"
+    ADD CONSTRAINT "rt_yleis_kasite_arvo_pkey" PRIMARY KEY ("kasite_wid");
 
 
 --
