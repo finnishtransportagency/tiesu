@@ -18,6 +18,8 @@ public class HibernateUtil {
 				File f = new File(path);
 				sessionFactory = c.configure(f).buildSessionFactory();
 			} else{
+//				This code will call hibernate.cfg.xml by default
+//				https://stackoverflow.com/questions/23908606/how-to-use-hibernate-properties-file-instead-of-hibernate-cfg-xml
 				sessionFactory = new Configuration().configure().buildSessionFactory();
 			}
 			// Create the SessionFactory from hibernate.cfg.xml			
