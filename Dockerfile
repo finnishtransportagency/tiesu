@@ -18,16 +18,17 @@ RUN cp -r build/* ../webapp/
 #Tomcat 7 poimittu projektin pom:sta ja openjdk8 confluencesta tuotannon ajoympariston kuvauksesta
 FROM maven:3.6.0-jdk-11-slim AS BUILD_BACKEND
 
-COPY ./src/main/java /data/src/main
-COPY ./src/main/resources /data/src/main/resources
+COPY ./src/main/java /data/src/main/java/
+COPY ./src/main/resources /data/src/main/resources/
 RUN rm /data/src/main/resources/hibernate.cfg.xml
 RUN mv  /data/src/main/resources/hibernate.cfg.docker.xml /data/src/main/resources/hibernate.cfg.xml
 COPY pom.xml /data/
-COPY ./src/main/resources/WEB-INF /data/src/main/webapp
+COPY ./src/main/webapp/WEB-INF /data/src/main/webapp/WEB-INF/
+
 
 #Copy frontend
 COPY --from=BUILD_FRONTEND /usr/src/webapp /data/src/main/webapp
-RUN cd /data && mvn clean install -Dmaven.test.skip=true -Dmaven.war.webxml=/data/src/main/resources/WEB-INF/web.xml
+RUN cd /data && mvn clean install -Dmaven.test.skip=true
 
 FROM tomcat:7-jdk8-openjdk
 
