@@ -391,7 +391,8 @@ public class TestDbUtil {
 
 	public static BigDecimal getNextSequenceVal(String sequenceName) {
 		Session session = sessionFactory.openSession();
-		String sql = "select " + sequenceName + ".nextval from dual";
+		String sql = "select nextval('" + sequenceName +"')";
+//		String sql = "select " + sequenceName + ".nextval from dual";
 
 		try {
 			Query query = session.createSQLQuery(sql);

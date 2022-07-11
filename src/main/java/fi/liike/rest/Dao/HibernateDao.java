@@ -164,7 +164,7 @@ public class HibernateDao extends HibernateSession {
 
 	protected void testSimpleSQLquery() {
 		//Just testing connection
-		getSession().createSQLQuery("SELECT 1 FROM dual").uniqueResult();
+		getSession().createSQLQuery("SELECT 1").uniqueResult();
 		closeSession();
 	}
 
