@@ -1,0 +1,31 @@
+services:
+  db:
+    image: tiesu-pgsql
+#    volumes: ['postgresql.log:/var/log/postgresql/']
+    command: ["postgres", "-c", "log_statement=all", "-c", "log_destination=stderr"]
+    build:
+      context: .
+      dockerfile: ./Dockerfile_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: tiesu
+      POSTGRES_PASSWORD: tiesu123
+
+  tiesu:
+    image: tiesu-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8081:8080"
+
+#volumes:
+#  postgress-logs: {}
+#    # uncomment and set the path of the folder to maintain persistancy
+#    data-postgresql:
+#    driver: local
+#    driver_opts:
+#      o: bind
+#      type: none
+#      device: postgres_docker_logs/logs/

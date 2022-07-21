@@ -6,7 +6,7 @@ env:
     LOCAL_JDBC_DBNAME: "dev/hassu/db:dbname"
     LOCAL_JDBC_USERNAME: "dev/hassu/db:username"
     LOCAL_JDBC_PASSWORD: "dev/hassu/db:password"
-    LOCAL_JDBC_SCHEMA: "dev/hassu/db:schema"
+    LOCAL_JDBC_SCHEMA: "dev/hassu/db:schema_tiesu"
 phases:
   pre_build:
     commands:

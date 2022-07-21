@@ -1,0 +1,5 @@
+#Tomcat 7 poimittu projektin pom:sta ja openjdk8 confluencesta tuotannon ajoympariston kuvauksesta
+FROM postgres:13
+
+ADD db/src/sql/database/postgres_scripts/tiesu_dump_local_docker_deployment.sql /docker-entrypoint-initdb.d/01_init.sql
+EXPOSE 5432
