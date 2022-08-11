@@ -84,9 +84,9 @@ public class JwtRequestFilter {
         try {
             LOG.debug(String.format("Path %s", request.getServletPath()));
 
-            String jwt = request.getHeader("x-amzn-oidc-data");
+            String jwt = request.getHeader("X-Amzn-Oidc-Data");
             if (jwt == null || jwt.length() == 0) {
-                jwt = request.getHeader("x-iam-data");
+                jwt = request.getHeader("X-Iam-Data");
             }
             if (jwt != null) {
                 String jwt_headers = jwt.split("\\.")[0];
