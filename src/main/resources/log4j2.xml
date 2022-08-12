@@ -1,0 +1,14 @@
+<Configuration>
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [%t] %X{user_name} %-5p %c- %m%n" />
+        </Console>
+    </Appenders>
+<!--    <Logger name="org.hibernate" level="info" />-->
+<!--    <Logger name="org.hibernate.SQL" level="debug" />-->
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="CONSOLE" />
+        </Root>
+    </Loggers>
+</Configuration>
