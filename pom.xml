@@ -234,7 +234,7 @@
 				<version>2.2</version>
 				<configuration>
 					<server>TomcatServer</server>
-					<path>/tiesu</path>
+					<path>/</path>
 				</configuration>
 			</plugin>
 		</plugins>

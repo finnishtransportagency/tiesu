@@ -35,4 +35,4 @@ FROM tomcat:7-jdk8-openjdk
 RUN mkdir ${CATALINA_HOME}/webapps/tiesu
 
 COPY --from=BUILD_BACKEND /data/target/TiesuUI.war ${CATALINA_HOME}/webapps/tiesu.war
-RUN unzip ${CATALINA_HOME}/webapps/tiesu.war -d ${CATALINA_HOME}/webapps/tiesu
+RUN unzip ${CATALINA_HOME}/webapps/tiesu.war -d ${CATALINA_HOME}/webapps/ROOT

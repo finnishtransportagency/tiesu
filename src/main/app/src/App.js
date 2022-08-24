@@ -155,7 +155,7 @@ export default App;
 
 // NB: use with browserhistory
 // const BaseURL = process.env.REACT_APP_BASE_URL || "TiesuUI";
-const BaseRestURL = process.env.REACT_APP_BASE_REST_URL || "tiesu/rest";
+const BaseRestURL = process.env.REACT_APP_BASE_REST_URL || "rest";
 
 export function fullURL(...urls) {
     // NB: user with browserhistory
