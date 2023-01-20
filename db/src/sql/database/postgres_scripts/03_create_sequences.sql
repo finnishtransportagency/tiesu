@@ -1,8 +1,8 @@
--- tiesutst.ratasuunnitelma_seq definition
+-- tiesu.ratasuunnitelma_seq definition
 
--- DROP SEQUENCE tiesutst.ratasuunnitelma_seq;
+-- DROP SEQUENCE tiesu.ratasuunnitelma_seq;
 
-CREATE SEQUENCE tiesutst.ratasuunnitelma_seq
+CREATE SEQUENCE tiesu.ratasuunnitelma_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -11,11 +11,11 @@ CREATE SEQUENCE tiesutst.ratasuunnitelma_seq
 	NO CYCLE;
 
 
--- tiesutst.rautatien_yleissuunnitelma_seq definition
+-- tiesu.rautatien_yleissuunnitelma_seq definition
 
--- DROP SEQUENCE tiesutst.rautatien_yleissuunnitelma_seq;
+-- DROP SEQUENCE tiesu.rautatien_yleissuunnitelma_seq;
 
-CREATE SEQUENCE tiesutst.rautatien_yleissuunnitelma_seq
+CREATE SEQUENCE tiesu.rautatien_yleissuunnitelma_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -24,11 +24,11 @@ CREATE SEQUENCE tiesutst.rautatien_yleissuunnitelma_seq
 	NO CYCLE;
 
 
--- tiesutst.rt_hist_seq definition
+-- tiesu.rt_hist_seq definition
 
--- DROP SEQUENCE tiesutst.rt_hist_seq;
+-- DROP SEQUENCE tiesu.rt_hist_seq;
 
-CREATE SEQUENCE tiesutst.rt_hist_seq
+CREATE SEQUENCE tiesu.rt_hist_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -37,11 +37,11 @@ CREATE SEQUENCE tiesutst.rt_hist_seq
 	NO CYCLE;
 
 
--- tiesutst.rys_hist_seq definition
+-- tiesu.rys_hist_seq definition
 
--- DROP SEQUENCE tiesutst.rys_hist_seq;
+-- DROP SEQUENCE tiesu.rys_hist_seq;
 
-CREATE SEQUENCE tiesutst.rys_hist_seq
+CREATE SEQUENCE tiesu.rys_hist_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -50,11 +50,11 @@ CREATE SEQUENCE tiesutst.rys_hist_seq
 	NO CYCLE;
 
 
--- tiesutst.tiesuunnitelma_hist_seq definition
+-- tiesu.tiesuunnitelma_hist_seq definition
 
--- DROP SEQUENCE tiesutst.tiesuunnitelma_hist_seq;
+-- DROP SEQUENCE tiesu.tiesuunnitelma_hist_seq;
 
-CREATE SEQUENCE tiesutst.tiesuunnitelma_hist_seq
+CREATE SEQUENCE tiesu.tiesuunnitelma_hist_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -63,11 +63,11 @@ CREATE SEQUENCE tiesutst.tiesuunnitelma_hist_seq
 	NO CYCLE;
 
 
--- tiesutst.tiesuunnitelma_seq definition
+-- tiesu.tiesuunnitelma_seq definition
 
--- DROP SEQUENCE tiesutst.tiesuunnitelma_seq;
+-- DROP SEQUENCE tiesu.tiesuunnitelma_seq;
 
-CREATE SEQUENCE tiesutst.tiesuunnitelma_seq
+CREATE SEQUENCE tiesu.tiesuunnitelma_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -76,11 +76,11 @@ CREATE SEQUENCE tiesutst.tiesuunnitelma_seq
 	NO CYCLE;
 
 
--- tiesutst.yleissuunitelma_seq definition
+-- tiesu.yleissuunitelma_seq definition
 
--- DROP SEQUENCE tiesutst.yleissuunitelma_seq;
+-- DROP SEQUENCE tiesu.yleissuunitelma_seq;
 
-CREATE SEQUENCE tiesutst.yleissuunitelma_seq
+CREATE SEQUENCE tiesu.yleissuunitelma_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807
@@ -89,11 +89,11 @@ CREATE SEQUENCE tiesutst.yleissuunitelma_seq
 	NO CYCLE;
 
 
--- tiesutst.yleissuunnitelma_hist_seq definition
+-- tiesu.yleissuunnitelma_hist_seq definition
 
--- DROP SEQUENCE tiesutst.yleissuunnitelma_hist_seq;
+-- DROP SEQUENCE tiesu.yleissuunnitelma_hist_seq;
 
-CREATE SEQUENCE tiesutst.yleissuunnitelma_hist_seq
+CREATE SEQUENCE tiesu.yleissuunnitelma_hist_seq
 	INCREMENT BY 1
 	MINVALUE 1
 	MAXVALUE 9223372036854775807

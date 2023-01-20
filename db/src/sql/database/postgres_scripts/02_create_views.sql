@@ -1,6 +1,6 @@
 -- tiesutst.palvelupaikat_latest source
 
-CREATE OR REPLACE VIEW tiesutst.palvelupaikat_latest
+CREATE OR REPLACE VIEW tiesu.palvelupaikat_latest
 AS SELECT foo.nimi,
     foo.lyhenne,
     foo.rataosa,
@@ -61,8 +61,3 @@ form_version",
            FROM tiesutst.palvelupaikat) foo
   WHERE foo.recency = 1 AND foo.deleted::text = 'n'::text;
 
--- Permissions
-
-ALTER TABLE tiesutst.palvelupaikat_latest OWNER TO tietokatalogidev;
-GRANT ALL ON TABLE tiesutst.palvelupaikat_latest TO tietokatalogidev;
-GRANT SELECT ON TABLE tiesutst.palvelupaikat_latest TO cognos;
