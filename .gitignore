@@ -10,3 +10,5 @@ target/*
 ~$ratasuunnitelma.xlsx
 vagrant_rsa
 password.txt
+
+.idea
