@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.google.common.base.Preconditions;
+import fi.liike.rest.auth.Constants;
 import fi.liike.rest.auth.Right;
 import fi.liike.rest.auth.UserGroup;
 import org.slf4j.Logger;
@@ -250,12 +251,12 @@ public abstract class MainController {
 	}
 
 	protected void setRemoteUserToContent(HttpServletRequest httpRequest, ContentDto content) {
-		logRequest("setRemoteUserToContent", httpRequest.getHeader("OAM_GROUPS"));
-		content.setRivimuokkaajatunnus(httpRequest.getHeader("OAM_REMOTE_USER"));
+		logRequest("setRemoteUserToContent", httpRequest.getHeader(Constants.JWT_USER_GROUPS_ATTRIBUTE));
+		content.setRivimuokkaajatunnus(httpRequest.getHeader(Constants.JWT_USER_NAME_ATTRIBUTE));
 	}
 
 	protected String getUser(HttpServletRequest httpRequest) {
-		return httpRequest.getHeader("OAM_REMOTE_USER");
+		return httpRequest.getHeader(Constants.JWT_USER_NAME_ATTRIBUTE);
 	}
 
 	public Response buildResponse(List<KasiteArvoContent> resources) {
@@ -315,10 +316,10 @@ public abstract class MainController {
 	}
 
 	private List<UserGroup> getUserGroups(HttpServletRequest httpRequest) {
-		String oamGroupsHeader = httpRequest.getHeader("OAM_GROUPS");
+		String userGroupsHeader = httpRequest.getHeader(Constants.JWT_USER_GROUPS_ATTRIBUTE);
 		List<UserGroup> userGroups = null;
-		if (oamGroupsHeader != null) {
-			userGroups = UserGroup.getUserGroups(oamGroupsHeader.split(","));
+		if (userGroupsHeader != null) {
+			userGroups = UserGroup.getUserGroups(userGroupsHeader.split(","));
 		}
 		return userGroups;
 	}
