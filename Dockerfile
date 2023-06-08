@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY ./src/main/app /usr/src/app
 
 RUN npm rebuild node-sass
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 RUN rm -rf ../webapp/build/*
