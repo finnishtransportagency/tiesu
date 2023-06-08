@@ -7,7 +7,7 @@
 <!--    <Logger name="org.hibernate" level="info" />-->
 <!--    <Logger name="org.hibernate.SQL" level="debug" />-->
     <Loggers>
-        <Root level="debug">
+        <Root level="info">
             <AppenderRef ref="CONSOLE" />
         </Root>
     </Loggers>
