@@ -253,7 +253,7 @@ public class HibernateDao extends HibernateSession {
 
 	public void delete(Class<? extends Haettava> className, Class<? extends HaettavaHistory> historyClassName, int id,
 			HaettavaHistory history, DaoContent deleteContent, String remoteUser) throws SQLException {
-		LOG.info("Removing content {} with name: {}", deleteContent.getContent().getClass(), deleteContent.getContent().getNimi());
+		LOG.info("Deleting content {} with id: {}", className, id);
 
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(className);
