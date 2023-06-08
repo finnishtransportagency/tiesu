@@ -196,6 +196,7 @@ public class HibernateDao extends HibernateSession {
 	}
 
 	public Haettava update(Session passedSession, DaoContent saveContent, HaettavaHistory history) {
+		LOG.info("Updating content {} with name: {}", saveContent.getContent().getClass(), saveContent.getContent().getNimi());
 		Haettava content = saveContent.getContent();
 		Session session = passedSession;
 		if (session == null) {
@@ -252,6 +253,8 @@ public class HibernateDao extends HibernateSession {
 
 	public void delete(Class<? extends Haettava> className, Class<? extends HaettavaHistory> historyClassName, int id,
 			HaettavaHistory history, DaoContent deleteContent, String remoteUser) throws SQLException {
+		LOG.info("Removing content {} with name: {}", deleteContent.getContent().getClass(), deleteContent.getContent().getNimi());
+
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(className);
 		criteria.add(Restrictions.eq("tunnus", id));
