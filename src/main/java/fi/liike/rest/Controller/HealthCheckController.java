@@ -16,7 +16,7 @@ public class HealthCheckController extends HibernateDao {
     @Path("")
     public Response getHealth() {
         LOG.debug("Health check called");
-        testSimpleSQLquery();
+        // testSimpleSQLquery();
         return Response.ok().build();
     }
 }
